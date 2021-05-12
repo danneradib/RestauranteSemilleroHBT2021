@@ -8,7 +8,7 @@ La arquitectra propuesta para la solucion se encuentra en la imagen:
 
 ![alt text](https://github.com/danneradib/RestauranteSemilleroHBT2021/blob/main/Restaurante_Semillero_2021.jpg)
 
-El documento de historias de usuario se adjunta en el reporitorio
+El documento de historias de usuario se adjunta en el reporitorio: link(Historias Usuario - Restaurante El Semillero.xls)
 
 ```
 SEMILLERO.postman_collection
