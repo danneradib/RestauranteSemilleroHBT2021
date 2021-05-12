@@ -1,0 +1,5 @@
+package com.heinsohn.semillero.service;
+
+public class UserController {
+
+}

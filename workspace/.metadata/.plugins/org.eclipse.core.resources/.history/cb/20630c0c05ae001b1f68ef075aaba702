@@ -1,0 +1,5 @@
+package com.heinsohn.semillero.config;
+
+public class SpringFoxConfig {
+
+}

@@ -1,0 +1,5 @@
+package com.heinsohn.semillero.repository;
+
+public class UsuariosJpaRepository {
+
+}

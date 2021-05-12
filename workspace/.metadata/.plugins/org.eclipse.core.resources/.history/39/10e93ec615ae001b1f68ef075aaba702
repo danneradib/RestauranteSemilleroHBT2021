@@ -1,0 +1,9 @@
+package com.heinsohn.semillero.repository;
+
+import org.springframework.stereotype.Repository;
+import com.heinsohn.semillero.dto.*;
+
+@Repository
+public class UsuariariosRepository extends CrudRepository<UsuarioDTO, Integer> {
+
+}

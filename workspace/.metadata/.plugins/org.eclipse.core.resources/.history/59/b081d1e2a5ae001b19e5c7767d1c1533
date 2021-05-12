@@ -1,0 +1,22 @@
+package com.heinsohn.semillero.repository;
+
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import com.heinsohn.semillero.dto.*;
+
+@Repository
+public interface UsuariariosRepository extends CrudRepository<Usuarios, Integer> {
+	
+	@Query("SELECT u FROM usuarios u WHERE u.login = ?1")
+	Usuarios consultarUsuarioCorreo(String login);
+	
+	@Query(value = "SELECT * FROM usuarios u WHERE u.estado = ?1", 
+		   nativeQuery = true)
+	List<Usuarios> consultarUsuariosActivos(String estado);
+	
+}

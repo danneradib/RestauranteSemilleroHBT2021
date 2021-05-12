@@ -1,0 +1,5 @@
+package com.heinsohn.semillero.security;
+
+public class WebSecurity extends WebSecurityConfigurerAdapter {
+
+}

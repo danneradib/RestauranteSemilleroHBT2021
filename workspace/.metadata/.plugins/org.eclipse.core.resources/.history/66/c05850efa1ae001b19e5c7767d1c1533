@@ -1,0 +1,9 @@
+package com.heinsohn.semillero.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.heinsohn.semillero.dto.*;
+
+public interface UsuariosJpaRepository extends JpaRepository<UsuarioDTO, Integer> {
+
+}

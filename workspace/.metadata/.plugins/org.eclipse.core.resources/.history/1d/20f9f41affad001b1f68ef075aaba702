@@ -1,0 +1,50 @@
+package com.heinsohn.semillero.service;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("usuarios")
+public class UserController {
+
+	/**
+	 * Metodo que retorna los datos de los usuarios
+	 * por medio del metodo HTTP.GET
+	 * 
+	 * @return String
+	 */
+	@GetMapping
+	public String getUsuario() {
+		return "Los usuarios del Restaurante El Semillero.";
+	}
+	
+	/**
+	 * Metodo que permite registrar los datos de un usuario
+	 * por medio del metodo HTTP.POST
+	 * 
+	 * @return String
+	 */
+	@PostMapping
+	public String crearUsuario() {
+		return "El usuario se registro exitosamente!";
+	}
+	
+	/**
+	 * Metodo que permite actualizar los datos de un usuario
+	 * por medio del metodo HTTP.PUT
+	 * 
+	 * @return String
+	 */
+	@PutMapping
+	public String actualizarUsuario() {
+		return "Se actualizo el usuario!";
+	}
+	
+	public String eliminarUsuario() {
+		return "Se elimino el usuario exitosament!";
+	}
+	
+}
