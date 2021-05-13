@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.heinsohn.semillero.dto.Usuarios;
+import com.heinsohn.semillero.dto.UsuarioDTO;
+import com.heinsohn.semillero.entity.Usuarios;
 import com.heinsohn.semillero.repository.UsuariariosRepository;
 import com.heinsohn.semillero.repository.UsuariosJpaRepository;
 

@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.heinsohn.semillero.dto.*;
+import com.heinsohn.semillero.entity.Usuarios;
 
 public interface UsuariosJpaRepository extends JpaRepository<Usuarios, Integer> {
 
