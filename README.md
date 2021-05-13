@@ -10,6 +10,10 @@ La arquitectra propuesta para la solucion se encuentra en la imagen:
 
 El documento de historias de usuario se adjunta en el reporitorio: link(Historias Usuario - Restaurante El Semillero.xls)
 
+El diagrama Entidad Relación para el modalo de seguridad:
+
+![alt text](https://github.com/danneradib/RestauranteSemilleroHBT2021/blob/main/DiagramaER.png)
+
 ```
 SEMILLERO.postman_collection
 ```
