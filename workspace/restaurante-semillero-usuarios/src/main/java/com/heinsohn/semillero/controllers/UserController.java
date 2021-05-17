@@ -112,6 +112,8 @@ public class UserController {
 				
 				usuarioEntity.setPassword(this.bCryptPasswordEncoder.encode(usuario.getPassword()));
 				
+				usuarioEntity.setIdPublico(UUID.randomUUID().toString());
+				
 				usuarioEntity = uJpaRepository.save(usuarioEntity);
 				
 				if(null != usuarioEntity && usuarioEntity.getId() > 0) {
@@ -121,7 +123,7 @@ public class UserController {
 					
 					usuarioMap.setIdUsuario(usuarioEntity.getId());
 					
-					usuario.setIdPublico(UUID.randomUUID().toString());
+					usuario.setIdPublico(usuarioEntity.getIdPublico());
 					
 					return ResponseEntity.status(HttpStatus.OK).body(usuarioMap);
 				}

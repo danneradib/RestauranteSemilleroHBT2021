@@ -26,6 +26,10 @@ public class Usuarios {
 	@Column(name = "ID", nullable = false)
 	private int id;
 	
+	@Column(name = "ID_PUBLICO", length = 150, nullable = false)
+	@Size(max = 150, min = 10)
+	private String idPublico;
+	
 	@Column(name = "NOMBRE", length = 100, nullable = false)
 	@Size(max = 100, min = 10)
 	private String nombre;
@@ -53,9 +57,10 @@ public class Usuarios {
 		
 	}
 	
-	public Usuarios(int id, String nombre, String login, String password, EstadosEnum estado) {
+	public Usuarios(int id, String idPublico, String nombre, String login, String password, EstadosEnum estado) {
 		super();
 		this.id = id;
+		this.idPublico = idPublico;
 		this.nombre = nombre;
 		this.login = login;
 		this.password = password;
@@ -92,6 +97,14 @@ public class Usuarios {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getIdPublico() {
+		return idPublico;
+	}
+
+	public void setIdPublico(String idPublico) {
+		this.idPublico = idPublico;
 	}
 
 	public String getNombre() {
