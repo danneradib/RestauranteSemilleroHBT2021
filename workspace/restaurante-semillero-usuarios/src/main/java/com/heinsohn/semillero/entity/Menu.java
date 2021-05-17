@@ -15,7 +15,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
-import com.heinsohn.semillero.emuns.EstadosEnum;
+import com.heinsohn.semillero.enums.EstadosEnum;
 
 @Entity
 @Table(name = "MENU")

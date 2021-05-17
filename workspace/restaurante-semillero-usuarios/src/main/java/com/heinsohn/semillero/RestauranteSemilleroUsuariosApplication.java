@@ -6,6 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import com.heinsohn.semillero.service.UsuariosService;
+import com.heinsohn.semillero.service.UsuariosServiceImpl;
+
 @SpringBootApplication
 @EnableDiscoveryClient
 public class RestauranteSemilleroUsuariosApplication {
@@ -19,4 +22,5 @@ public class RestauranteSemilleroUsuariosApplication {
 	{
 		return new BCryptPasswordEncoder();
 	}
+	
 }
