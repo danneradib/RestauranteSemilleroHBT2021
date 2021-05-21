@@ -1,0 +1,37 @@
+<div color="primary" class="navbar flex flex-direction-row align-items-center">
+  <div class="flex flex-direction-row titles">
+    <h1 routerLink="/welcome" class="title add-margin">Faccilito POS - Restaurante</h1>
+     <img class="logo-image" *ngIf="logo" src="{{logo}}">
+  </div>
+
+  <div *ngFor="let m of opcionesMenu; index as i;">
+    <button mat-button [matMenuTriggerFor]="belowMenu" class="menu">{{m.opcionMenu}}</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item *ngFor="let h of m.hijos" routerLink="{{h.url}}">
+        <mat-icon>{{h.icono}}</mat-icon>
+        <span>{{h.opcionMenu}}</span>
+      </button>
+    </mat-menu>
+  </div>
+
+  <button mat-button [matMenuTriggerFor]="menu" class="menu">
+    <span>{{usuario}}</span>
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</div>
+
+<!-- Mobile Menu -->
+<mat-menu #menu="matMenu" xPosition="before">
+  <button mat-menu-item routerLink="/profile">
+    <mat-icon>perm_identity</mat-icon>
+    <span>Perfil</span>
+  </button>
+  <button mat-menu-item routerLink="/changepass">
+    <mat-icon>vpn_key</mat-icon>
+    <span>Cambiar contraseña</span>
+  </button>
+  <button mat-menu-item routerLink="/" (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Logout</span>
+  </button>
+</mat-menu>

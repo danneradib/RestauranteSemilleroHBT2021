@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Producto } from '../structuras';
+import { Producto } from '../estructuras';
 
 const ELEMENT_DATA: Producto[] = [];
 

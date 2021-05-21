@@ -1,0 +1,16 @@
+@import '../app.component.scss';
+
+.container {
+  height: 75vh;
+}
+
+button {
+  width: 10rem;
+  height: 2.5rem;
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    flex-direction: column;
+  }
+}

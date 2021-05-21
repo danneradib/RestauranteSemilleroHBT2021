@@ -1,0 +1,17 @@
+<div *ngFor="let alert of alerts" class="modal fade" id="alert" tabindex="-1" role="dialog" [ngStyle]="{'display':display}" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class='ng-modal'>
+                <div class='ng-modal-overlay'></div>
+                <div class='ng-modal-dialog'>
+                    <div class='ng-modal-dialog-content'>
+                        <div class="{{ cssClass(alert) }} alert-dismissable">
+                            {{alert.message}}
+                            <a class="close" (click)="removeAlert(alert)">&times;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
