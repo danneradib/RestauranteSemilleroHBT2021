@@ -1,6 +1,9 @@
 package com.heinsohn.semillero.dto;
 
 import java.io.Serializable;
+import java.util.List;
+
+import com.heinsohn.semillero.enums.RolesEnum;
 
 public class UsuarioDTO implements Serializable {
 
@@ -18,18 +21,21 @@ public class UsuarioDTO implements Serializable {
 	private String login;
 	
 	private String password;
-
+	
+	private List<RolesEnum> roles;
+	
 	public UsuarioDTO() {
 		
 	}
 	
-	public UsuarioDTO(String idPublico, int idUsuario, String nombre, String login, String password) {
+	public UsuarioDTO(String idPublico, int idUsuario, String nombre, String login, String password, List<RolesEnum> roles) {
 		super();
 		this.idPublico = idPublico;
 		this.idUsuario = idUsuario;
 		this.nombre = nombre;
 		this.login = login;
 		this.password = password;
+		this.roles = roles;
 	}
 
 	public String getIdPublico() {
@@ -70,6 +76,14 @@ public class UsuarioDTO implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public List<RolesEnum> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<RolesEnum> roles) {
+		this.roles = roles;
 	}
 	
 }

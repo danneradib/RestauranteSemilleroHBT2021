@@ -3,6 +3,8 @@ package com.heinsohn.semillero.security;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -83,8 +85,13 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 		// Se consulta la infromacion del usuario de la BD
 		UsuarioDTO usuarioDTO = usuariosService.getUsetDateilsByUserLogin(login);
 		
+		Map<String, Object> claims = new HashMap<>();
+		
+		claims.put("Roles", usuarioDTO.getRoles().toArray().toString());
+		
 		// Se configura el tokem con el login, una fecha de expiracion y un token secreto
 		String token = Jwts.builder()
+				.setClaims(claims)
 				.setSubject(String.valueOf(usuarioDTO.getIdUsuario()))
 				.setExpiration(new Date(System.currentTimeMillis() + Long.parseLong(environment.getProperty("token.expiration_time"))))
 				.signWith(SignatureAlgorithm.HS512, environment.getProperty("token.secret"))

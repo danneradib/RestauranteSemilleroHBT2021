@@ -17,4 +17,6 @@ public interface UsuariosJpaRepository extends JpaRepository<Usuarios, Integer> 
 	
 	Usuarios findByLogin(String login);
 	
+	Usuarios findByIdPublico(String id);
+	
 }

@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -37,7 +38,7 @@ public class Rol {
 	@ManyToMany(mappedBy = "roles")
 	private Set<Usuarios> usuarios;
 	
-	@ManyToMany(mappedBy = "roles")
+	@ManyToMany(fetch = FetchType.EAGER, mappedBy = "roles")
 	private Set<Menu> menus;
 
 	public Rol() {
