@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -42,7 +43,7 @@ public class Usuarios {
 	@Size(max = 150, min = 10)
 	private String password;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
 	  name = "USURIO_ROL", 
 	  joinColumns = @JoinColumn(name = "ID_USUARIO"), 
